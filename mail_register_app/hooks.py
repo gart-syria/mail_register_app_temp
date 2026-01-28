@@ -5,6 +5,100 @@ app_description = "For Diwan"
 app_email = "it@ortas.online"
 app_license = "mit"
 
+
+fixtures = [
+    # Role
+    {
+        "dt": "Role",
+        "filters": [
+            ["name", "in", ["Diwan User"]]
+        ]
+    },
+
+    # Server Scripts (v15)
+    {
+        "dt": "Server Script",
+        "filters": [
+            ["name", "in", [
+                "get_user_diwan",
+                "Set root Outgoing Mail",
+                "Add Notes to Mail Reciepient Doctype with Ability to Update and Tracking",
+                "Track Updating of Notes",
+                "Filter Waiting Mails Acording to User",
+                "Filter mails according to user",
+                "Auto Fill Mail Reciepient in Queue",
+                "Auto Mail Number"
+            ]]
+        ]
+    },
+
+    # Client Scripts (v15)
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["name", "in", [
+                "Button For Adding Replay To Mail",
+                "Auto Select for Issuing Receiving office if inbox from external entity",
+                "Auto Fill Issuing Office",
+                "Button To Show Replays",
+                "Button For Adding Notes To Mail",
+                "Updated Auto Compose Inbox When Recieving Mail",
+                "Change Mail Status from Draft to Sent v2"
+            ]]
+        ]
+    },
+       # Custom Doctypes
+{
+    "dt": "Custom Doctype",
+    "filters": [
+        ["name", "in", [
+            "Mail Register",
+            "Mail Recipients",
+            "External Entity",
+            "Mail External Recipients",
+            "Diwan",
+            "Incoming Confirmation Queue",
+           "Mail Annotation",
+           "Mail Annotation History",
+           "User Diwan Mapping",
+            
+        ]]
+    ]
+},
+     # Export Custom Fields only for your app's Doctypes (if you have added any)
+    {"dt": "Custom Field", "filters": [
+        ["dt", "in", [
+            "Mail Register",
+            "Incoming Confirmation Queue",
+            "Mail Recipients",
+            "Mail Annotation",
+            "Mail Annotation History",
+            "User Diwan Mapping",
+            "External Entity",
+            "Mail External Recipients",
+            "Diwan"
+            
+            
+        ]]
+    ]},
+
+    # Export Property Setters for your Doctypes (if you modified field properties)
+    {"dt": "Property Setter", "filters": [
+        ["doc_type", "in", [
+            "Mail Register",
+            "Incoming Confirmation Queue",
+            "Mail Recipients",
+            "Mail Annotation",
+            "Mail Annotation History",
+            "User Diwan Mapping",
+            "External Entity",
+            "Mail External Recipients",
+            "Diwan"
+        ]]
+    ]}
+  
+]
+
 # Apps
 # ------------------
 
